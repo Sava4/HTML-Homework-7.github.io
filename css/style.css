@@ -5,5 +5,40 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 5px; 
+    line-height: 2;
+    text-transform: uppercase;
+    padding-top: 200px;
 }
 
+.floating-text {
+    text-align: justify;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 600px;
+    overflow: hidden;perspective: 400px;
+}
+
+.animated-text {
+    position: relative;
+    top: 900px;
+    transform-origin: 50% 100%;
+    animation: go 30s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes go {
+    0% {
+        top: 900px;
+        transform: rotateX(20deg)translateZ(0);
+      }
+      100% { 
+        top: -2000px;
+        transform: rotateX(25deg) translateZ(-1000px);
+      }
+}
